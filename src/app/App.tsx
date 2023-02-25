@@ -1,9 +1,9 @@
 import React from 'react';
 import {StatusBar, useColorScheme} from 'react-native';
-
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {RootNavigator} from '../processes/navigation';
+import {ReactQueryProvider} from '../shared/api';
 
 export const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -18,7 +18,9 @@ export const App = () => {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <RootNavigator />
+      <ReactQueryProvider>
+        <RootNavigator />
+      </ReactQueryProvider>
     </>
   );
 };
