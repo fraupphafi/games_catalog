@@ -27,6 +27,5 @@ module.exports = {
       },
     ],
     '@babel/plugin-proposal-export-namespace-from',
-    'react-native-reanimated/plugin',
   ],
 };
