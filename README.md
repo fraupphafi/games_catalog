@@ -18,3 +18,16 @@ List of used libraries
 - react native paper
 - react query
 - ky
+
+## TODO: 
+- [x] pages
+- [x] add alias
+- [ ] get data
+- [ ] add ui
+- [ ] add theming
+- [ ] add interceptors
+- [ ] add abortcontroller
+- [ ] add error snacks
+- [ ] add tests (opt)
+- [ ] add icon (opt)
+- [ ] add splashscreen (opt)

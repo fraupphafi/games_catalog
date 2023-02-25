@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 
-import {GamesListConnector} from '../../../../pages/games-list';
+import {GamesListConnector} from '@pages/games-list';
 
 import {THomeScreenProps} from '../types';
 
