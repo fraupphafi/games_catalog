@@ -6,9 +6,9 @@ Made with React Native and TypeScript.
 ## How to run
 ```
   yarn
-  npx pod-install (* for ios)
+  npx pod-install
 
-  yarn ios / yarn android
+  yarn ios _or_ yarn android
 ```
 
 ## Stack
