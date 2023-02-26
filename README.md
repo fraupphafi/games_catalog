@@ -22,8 +22,9 @@ List of used libraries
 ## TODO: 
 - [x] pages
 - [x] add alias
-- [ ] get data
-- [ ] add ui
+- [x] get data
+- [ ] add options to request
+- [X] add ui
 - [ ] add theming
 - [ ] add interceptors
 - [ ] add abortcontroller

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
-import {useGetGamesList} from '@entities/games-list';
+import {useGetGamesList, mapGamesListToUi} from '@entities/games-list';
 
 import {GamesList} from './games-list';
 
@@ -9,10 +9,19 @@ type Props = {
 };
 
 export const GamesListConnector = ({onDetailsPress}: Props) => {
-  const {data, isLoading} = useGetGamesList({
-    searchParams: {platform: 'browser'},
+  const {data, isLoading, refetch, isRefetching} = useGetGamesList({
+    searchParams: {platform: 'browser'}, // TODO: filters
   });
-  console.log(data, isLoading);
 
-  return <GamesList onDetailsPress={onDetailsPress} />;
+  const gamesList = useMemo(() => mapGamesListToUi(data), [data]);
+
+  return (
+    <GamesList
+      gamesList={gamesList}
+      isLoading={isLoading}
+      isRefetching={isRefetching}
+      onDetailsPress={onDetailsPress}
+      refetch={refetch}
+    />
+  );
 };

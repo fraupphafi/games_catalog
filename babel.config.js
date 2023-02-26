@@ -28,4 +28,9 @@ module.exports = {
     ],
     '@babel/plugin-proposal-export-namespace-from',
   ],
+  env: {
+    production: {
+      plugins: ['react-native-paper/babel'],
+    },
+  },
 };
